@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo mkdir -p ~/docker/grafana/data
-sudo mkdir -p ~/docker/influxdb/data
+mkdir -p ~/docker/grafana/data
+mkdir -p ~/docker/influxdb/data
 
 sudo chown -R 472:472 ~/docker/grafana/data
 

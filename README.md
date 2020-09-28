@@ -10,23 +10,53 @@ cd quickstart-with-telegraf-influxdb-grafana-monitoring
 
 ```
 
-To view logs:
+**To view logs:**
 
 ```
 docker-compose logs
 ```
 
-Log in to Grafana with admin/admin
+**Log in to Grafana with admin/admin**
 
 ```
 http://localhost:3000
 
 Enter the username: admin and password: admin
+```
 
-then import the host metrics dashboard json to test the monitoring setup.
+**Configure InfluxDB Datasource in grafana**
+
+```
+
+1. Click on the configuration and select DataSource
+2. Click on add DataSource and select influxDB
+
+Provide the following configuration:
+
+Name: InfluxDB
+Query Language: InfluxQL
+URL: http://localhost:8086
+Access: Browser
+Database: 
+HttpMethod: GET
+
+Click on Save and Test
+
 ``` 
 
-Clean Up:
+**Import the telegraf Host metircs dashboard**
+
+```
+Click on the create(+) icon and select import 
+
+Click on the import Json file and select the json file from the repo
+
+click on save dashboard
+
+Verify the metrics by clicking the dashboard
+```
+
+**Clean Up:**
 
 ```
 docker-compose stop
