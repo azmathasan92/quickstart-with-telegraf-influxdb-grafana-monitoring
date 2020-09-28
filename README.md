@@ -37,7 +37,7 @@ Name: InfluxDB
 Query Language: InfluxQL
 URL: http://localhost:8086
 Access: Browser
-Database: 
+Database: mydb
 HttpMethod: GET
 
 Click on Save and Test
