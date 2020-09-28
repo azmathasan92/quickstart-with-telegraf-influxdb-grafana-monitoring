@@ -7,8 +7,6 @@ sudo chown -R 472:472 ~/docker/grafana/data
 
 docker-compose up -d
 
-
-
 echo "Create new database"
 curl -XPOST 'http://localhost:8086/query' --data-urlencode 'q=CREATE DATABASE mydb'
 
