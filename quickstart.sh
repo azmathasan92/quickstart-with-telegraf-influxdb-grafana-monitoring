@@ -3,9 +3,11 @@
 sudo mkdir -p ~/docker/grafana/data
 sudo mkdir -p ~/docker/influxdb/data
 
+sudo chown -R 472:472 ~/docker/grafana/data
+
 docker-compose up -d
 
-sudo chown -R 472:472 ~/docker/grafana/data
+
 
 echo "Create new database"
 curl -XPOST 'http://localhost:8086/query' --data-urlencode 'q=CREATE DATABASE mydb'
